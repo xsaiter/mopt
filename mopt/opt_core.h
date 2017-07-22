@@ -10,9 +10,7 @@ extern "C" {
     typedef struct{        
         double x[NX];
         double y;
-    } point;
-    
-    void point_print(point *p);
+    } point;        
 
 #ifdef __cplusplus
 }
