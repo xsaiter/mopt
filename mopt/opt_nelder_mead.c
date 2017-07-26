@@ -66,40 +66,40 @@ static int p_sort_cmp(const void *arg1, const void *arg2)
     return ((*a)->y < (*b)->y) ? 1 : -1;
 }
 
-static void p_add(point *a, point *b, point *r)
+static void p_add(const point *a, const point *b, point *r)
 {
     FOR_X{
         r->x[i] = a->x[i] + b->x[i];
     }
 }
 
-static void p_sub(point *a, point *b, point *r)
+static void p_sub(const point *a, const point *b, point *r)
 {
     FOR_X{
         r->x[i] = a->x[i] - b->x[i];
     }
 }
 
-static void p_mul(point *a, double n, point *r)
+static void p_mul(const point *a, const double n, point *r)
 {
     FOR_X{
         r->x[i] = a->x[i] * n;
     }
 }
 
-static void p_div(point *a, double n, point *r)
+static void p_div(const point *a, const double n, point *r)
 {
     FOR_X{
         r->x[i] = a->x[i] / n;
     }
 }
 
-static inline void p_copy(point *dest, point *src)
+static inline void p_copy(point *dest, const point *src)
 {
     memcpy(dest, src, sizeof (point));
 }
 
-static int sx_stop(simplex *sx)
+static int sx_stop(const simplex *sx)
 {
     double m, d;
     for (int j = 0; j < NX; ++j) {
