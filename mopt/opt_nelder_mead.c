@@ -80,14 +80,14 @@ static void p_sub(const point *a, const point *b, point *r)
     }
 }
 
-static void p_mul(const point *a, const double n, point *r)
+static void p_mul(const point *a, double n, point *r)
 {
     FOR_X{
         r->x[i] = a->x[i] * n;
     }
 }
 
-static void p_div(const point *a, const double n, point *r)
+static void p_div(const point *a, double n, point *r)
 {
     FOR_X{
         r->x[i] = a->x[i] / n;
