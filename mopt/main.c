@@ -9,10 +9,12 @@ int main(int argc, char** argv)
     opt_nelder_mead(&result);
     
     printf("point:\nx:");
+    
     for(int i= 0; i< NX; ++i){
         printf("%f ", result.x[i]);
     }
+    
     printf("\ny = %f", result.y);
+    
     return (EXIT_SUCCESS);
 }
-

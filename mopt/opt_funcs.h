@@ -6,6 +6,9 @@ extern "C" {
 #endif    
 
     double target_func(double *x);
+    double rosenbrock_func(double *x);
+    double himmelblau_func(double *x);
+    double booth_func(double *x);
 
 #ifdef __cplusplus
 }

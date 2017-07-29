@@ -7,10 +7,10 @@
 extern "C" {
 #endif  
 
-    typedef struct{        
+    typedef struct {
         double x[NX];
         double y;
-    } point;        
+    } point;
 
 #ifdef __cplusplus
 }
