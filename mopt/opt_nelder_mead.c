@@ -125,15 +125,15 @@ void opt_nelder_mead(point *result)
     double alpha = 1.0;
     double beta = 0.5;
     double gamma = 2.0;
-
-    simplex sx;
-    sx_init(&sx);
-    sx_populate(&sx);
-
+    
     point *xh, *xg, *xl;
     double yh, yg, yl;
     point xc, xr, xe, xs;
     point p, q, r;
+    simplex sx;
+    
+    sx_init(&sx);
+    sx_populate(&sx);
 
     while (!sx_stop(&sx)) {
         sx_calculate_func(&sx);
