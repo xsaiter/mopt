@@ -13,7 +13,7 @@
 #define FOR_X for (int i=0;i<NX;++i)
 #define FOR_S for (int j=0;j<NS;++j)
 
-static double func(point *p)
+inline static double func(point *p)
 {
     return target_func(p->x);
 }
