@@ -1,5 +1,5 @@
 #include <math.h>
-#include "opt_funcs.h"
+#include "opt_spec.h"
 
 double target_func(double *x)
 {

@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#include<time.h>
+#include <time.h>
 
 #include "opt_spec.h"
-#include "opt_funcs.h"
 
 #define NS (NX + 1)
 #define EPSILON 0.0001
@@ -125,13 +124,13 @@ void opt_nelder_mead(point *result)
     double alpha = 1.0;
     double beta = 0.5;
     double gamma = 2.0;
-    
+
     point *xh, *xg, *xl;
     double yh, yg, yl;
     point xc, xr, xe, xs;
     point p, q, r;
     simplex sx;
-    
+
     sx_init(&sx);
     sx_populate(&sx);
 

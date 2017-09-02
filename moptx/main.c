@@ -7,9 +7,9 @@
 
 static void compile_prog()
 {
-    const char *s = "gcc prog/main.c prog/opt_nelder_mead.c prog/opt_funcs.c -lm -o prog/res";        
-    fflush(NULL);    
-    int code = system(s);    
+    const char *s = "gcc prog/main.c prog/opt_nelder_mead.c prog/opt_funcs.c -lm -o prog/res";
+    fflush(NULL);
+    int code = system(s);
     if (code) {
         fprintf(stderr, "compilation %s failed with %d\n", s, code);
         exit(EXIT_FAILURE);
@@ -19,7 +19,7 @@ static void compile_prog()
 int main(int argc, char** argv)
 {
     compile_prog();
-    
+
     pid_t pid = fork();
 
     if (pid == 0) { /*child*/
@@ -28,6 +28,6 @@ int main(int argc, char** argv)
     } else { /*parent*/
         waitpid(pid, 0, 0);
     }
-    
+
     return (EXIT_SUCCESS);
 }
