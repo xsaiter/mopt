@@ -5,16 +5,16 @@
 
 int main(int argc, char** argv)
 {    
-    point result;
-    opt_nelder_mead(&result);
+    point res;
+    opt_nelder_mead(&res);
     
     printf("point:\nx:");
     
     for(int i= 0; i< NX; ++i){
-        printf("%f ", result.x[i]);
+        printf("%f ", res.x[i]);
     }
     
-    printf("\ny = %f", result.y);
+    printf("\ny = %f", res.y);
     
     return (EXIT_SUCCESS);
 }
